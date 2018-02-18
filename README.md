@@ -1,9 +1,7 @@
 # RxLiveData
 RxLiveData is a library of [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html) Kotlin extensions that provides some of the famous Rx ([Reactive Extensions](http://reactivex.io/)) operators like `filter`, `skip`, `take`, `withLatestFrom`, etc. on top of LiveData.
 
-[![Release](https://jitpack.io/v/oronbz/rxlivedata.svg)]
-(https://jitpack.io/#oronbz/rxlivedata)
-
+[![Release](https://jitpack.io/v/oronbz/rxlivedata.svg)](https://jitpack.io/#oronbz/rxlivedata)
 
 ## Download
 
