@@ -22,7 +22,7 @@ dependencies {
 
 ## Usage
 
-### Example of `filterNull`, `filter` and `switchMap`
+### Example of `filterNull`, `filter`, `switchMap` and `map`
 ```kotlin
 searchResults = query
         .filterNull()
@@ -30,6 +30,11 @@ searchResults = query
         .switchMap {
           gitHubRepository.searchUsers(it)
         }.filterNull()
+        .map {
+          it.users.map {
+            SearchItemViewModel(it.username, it.avatarUrl)
+          }
+        }
 ```
 
 ## List of supported operators
