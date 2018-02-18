@@ -1,5 +1,5 @@
 # RxLiveData
-RxLiveData is a library of [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html) extensions that provides some of the famous Rx ([Reactive Extensions](http://reactivex.io/)) operators like `filter`, `skip`, `take`, `withLatestFrom`, etc. on top of LiveData.
+RxLiveData is a library of [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html) Kotlin extensions that provides some of the famous Rx ([Reactive Extensions](http://reactivex.io/)) operators like `filter`, `skip`, `take`, `withLatestFrom`, etc. on top of LiveData.
 
 # Download
 
@@ -30,4 +30,13 @@ searchResults = query
         }.filterNull()
 ```
 
-
+# List of supported operators
+* `map`
+* `switchMap`
+* `filter` or `filterNullables` (if you work with nullables)
+* `filterNull`
+* `take`
+* `skip`
+* `merge`
+* `withLatestFrom`
+* More to come...
