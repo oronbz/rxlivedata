@@ -24,6 +24,8 @@ dependencies {
 
 ### Example of `filterNull`, `filter`, `switchMap` and `map`
 ```kotlin
+val query = MutableLiveData<String?>()
+
 searchResults = query
         .filterNull()
         .filter { it.isNotBlank() }
