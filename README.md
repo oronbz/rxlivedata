@@ -22,13 +22,14 @@ dependencies {
 
 ## Usage
 
-### Example of `filterNull`, `filter`, `switchMap` and `map`
+### Example of `filterNull`, `filter`, `distinctUntilChanged`, `switchMap` and `map`
 ```kotlin
 val query = MutableLiveData<String?>()
 
 searchResults = query
         .filterNull()
         .filter { it.isNotBlank() }
+        .distinctUntilChanged()
         .switchMap {
           gitHubRepository.searchUsers(it)
         }.filterNull()
@@ -48,6 +49,7 @@ searchResults = query
 * `skip`
 * `merge`
 * `withLatestFrom`
+* `distinctUntilChanged`
 * More to come...
 
 ## License
