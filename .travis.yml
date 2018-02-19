@@ -25,5 +25,5 @@ android:
 install:
   - true
 script:
-  - TERM=dumb ./gradlew test assembleDebug
+  - ./gradlew test assembleDebug
     
