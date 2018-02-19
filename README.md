@@ -6,7 +6,7 @@ RxLiveData is a library of [LiveData](https://developer.android.com/topic/librar
 
 ## Download
 
-Gradle:
+1. Add it in your root build.gradle at the end of repositories:
 
 ```gradle
 allprojects {
@@ -15,7 +15,10 @@ allprojects {
     maven { url 'https://jitpack.io' }
   }
 }
+```
 
+2. Add the dependency:
+```gradle
 dependencies {
   compile 'com.github.oronbz:rxlivedata:0.0.3'
 }
