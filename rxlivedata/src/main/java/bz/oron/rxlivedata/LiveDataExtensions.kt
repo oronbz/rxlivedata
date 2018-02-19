@@ -100,6 +100,33 @@ fun <X> LiveData<X>.skip(count: Int): LiveData<X> {
 }
 
 @MainThread
+fun <X> LiveData<X>.distinctUntilChanged(comparer: (X, X) -> Boolean): LiveData<X> {
+  val result = MediatorLiveData<X>()
+
+  result.addSource(this, {
+    it?.let {
+      val currentValue = result.value
+      if (currentValue != null) {
+        if (!comparer(it, currentValue)) {
+          result.value = it
+        }
+      } else {
+        result.value = it
+      }
+    }
+  })
+
+  return result
+}
+
+@MainThread
+fun <X> LiveData<X>.distinctUntilChanged(): LiveData<X> {
+  return distinctUntilChanged { v1, v2 ->
+    v1 == v2
+  }
+}
+
+@MainThread
 fun <X> List<LiveData<X>>.merge(): LiveData<X> {
   val result = MediatorLiveData<X>()
 
