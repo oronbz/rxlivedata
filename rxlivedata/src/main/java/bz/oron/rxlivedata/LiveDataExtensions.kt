@@ -11,7 +11,7 @@ import android.support.annotation.MainThread
 
 @MainThread
 fun <X,Y> LiveData<X>.map(func: (X) -> Y): LiveData<Y> {
-  return Transformations.map(this, func)
+  return Transformations.mapD(this, func)
 }
 
 @MainThread
