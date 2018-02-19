@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-  compile 'com.github.oronbz:rxlivedata:0.0.2'
+  compile 'com.github.oronbz:rxlivedata:0.0.3'
 }
 ```
 
