@@ -16,7 +16,7 @@ class StartWithTest: LiveDataTest() {
 
     observe(startWithTen)
 
-    assertEquals(9, startWithTen.value)
+    assertEquals(10, startWithTen.value)
 
     numberLiveData.value = 3
 
