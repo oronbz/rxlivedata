@@ -54,7 +54,7 @@ searchResults = query
 * `merge`
 * `withLatestFrom`
 * `distinctUntilChanged`
-* 'startWith'
+* `startWith`
 * More to come...
 
 ## License
