@@ -176,3 +176,15 @@ fun <X,Y,Z> LiveData<X>.withLatestFrom(source: LiveData<Y>, resultSelector: (Pai
 
   return  result
 }
+
+@MainThread
+fun <X> LiveData<X>.startWith(initialValue: X): LiveData<X> {
+  val result = MediatorLiveData<X>()
+
+  result.addSource(this, {
+    result.value = it
+  })
+
+  result.value = initialValue
+  return result
+}
