@@ -20,7 +20,7 @@ allprojects {
 2. Add the dependency to your app build.gradle:
 ```gradle
 dependencies {
-  compile 'com.github.oronbz:rxlivedata:0.0.3'
+  compile 'com.github.oronbz:rxlivedata:0.0.4'
 }
 ```
 
